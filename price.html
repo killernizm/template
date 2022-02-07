@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="price.css">
+        <link rel="icon" href="photo/icon.jpg">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#icon').click(function(){
+                    $('ul').toggleClass('show');
+                });
+            });
+        </script>
+        <title>Price</title>
+    </head>
+<body>
+    <header>
+        <video src="video/background.mp4" class="vid-bg" autoplay loop muted></video>
+        <div class="banner-text">
+            <h2>Dream House Makers</h2>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,<br>
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae <br>
+                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,<br> 
+                sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                <br>
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                <br>
+                 sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat 
+                <br>
+                voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                <br>
+                laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui <br>
+                in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo <br>
+                voluptas nulla pariatur?</p>
+        </div>
+    </header>
+    <nav>
+        <label class="logo">Dream House</label>
+        <ul>
+            <li><a class="active" href="index.html">HOME</a></li>
+            <li><a href="price.html">Үнийн санал</a></li>
+            <li><a href="about.html">Бидний тухай</a></li>
+            <li><a href="location.html">хаяг</a></li>
+        </ul>
+        <label id="icon">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+    <div class="cursor">
+        <script type="text/javascript">
+    const cursor = document.querySelector(".cursor");
+    var timeout;
+    document.addEventListener("mousemove", (e) => {
+        let x = e.pageX;
+        let y = e.pageY;
+    cursor.style.top = y + "px";
+    cursor.style.left = x + "px";
+    cursor.style.display = "block";
+function mouseStopped(){
+cursor.style.display = "none";
+}
+clearTimeout(timeout);
+timeout = setTimeout(mouseStopped, 1000)
+});
+    document.addEventListener("mouseout", () => {
+        cursor.style.display = "none";
+    });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: montserrat;
+    background: #01182b;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+}
+label.logo{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    padding: 0 40px;
+    line-height: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+nav a{
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10x;
+    border-radius: 3px;
+}
+a:hover{
+    color: blue;
+    background: yellow;
+    border: 5px solid yellow;
+    border-radius: 20%;
+    transition: .5s;
+}
+.active{
+    border: 1px solid yellow;
+    transition: .5s;
+}
+nav #icon{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 1048px){
+    label.logo{
+        font-size: 32px;
+        padding-left: 60px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+    nav a{
+        font-size: 17px;
+    }
+}
+@media (max-width: 909px){
+    nav #icon{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2f3640;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav a{
+        font-size: 20px;
+    }
+    a.active,a:hover{
+        border: none;
+        color: #3498db;
+    }
+    nav ul.show{
+        left: 0;
+    }
+}
+.slider{
+    display: flex;
+    width: 350px;
+    height: 200px;
+    background: url(photo/1.jpg);
+    margin: 25px;
+    animation: slide 20s infinite;
+}
+@keyframes slide{
+    25%{
+        background: url(photo/2.png);
+    }
+    50%{
+        background: url(photo/3.png);
+    }    
+    75%{
+        background: url(photo/4.png);
+    }    
+    100%{
+        background: url(photo/1.png);
+    }
+}
